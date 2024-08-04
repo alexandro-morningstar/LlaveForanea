@@ -1,0 +1,171 @@
+USE Alexandro;
+
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Open World', 1); --1
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Shooter', 1); --2
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Adventure', 1); --3
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Hack and Slash', 1); --4
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Racing', 1); --5
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Musical', 1); --9
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Survival Horror', 1); --6
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Terror', 1); --10
+
+--EVERYONE 1, 10+ 2, TEEN 3, MATURE 4, ADULTS 5, PENDING 6
+
+SELECT IdG, NombreG, Estatus FROM Genero;
+
+SELECT * FROM Videojuegos;
+EXECUTE get_all;
+
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Red Dead Redemption 2', '+18', 1);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Bloodborne', '+18', 4);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('RE4:Remake', '+18', 2);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Dying Light', '+18', 1);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Dark Souls 3', '+18', 4);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('CoD: Warzone', '+18', 2);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Manhunt 2', 5, 6);
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES ('Cry of Fear', 5, 6);
+
+-- ############ INNER JOIN ############
+--Retorna en GeneroId el numero del ID del genero
+SELECT * FROM Videojuegos;
+
+--Retorna todos los registros de videojuegos, junto con su correspondiente información de Genero donde coincidan IDs de genero
+SELECT * FROM Videojuegos inner join Genero ON Videojuegos.GeneroId = Genero.IdG;
+
+-- Retorna unicamente: de VIdeojuegos (Id, Nombre, Clasificacion), de Genero (NombreG) donde coincidan los IDs de genero
+SELECT Id, Nombre, Clasificacion, NombreG FROM Videojuegos inner join Genero ON Videojuegos.GeneroId = Genero.IdG;
+
+-- Retorna unicamente: de VIdeojuegos (Id, Nombre, Clasificacion), de Genero (NombreG) donde coincidan los IDs de genero
+-- PERO: mostrando el nombre de la columna NombreG como Genero (no cambia el nombre de la tabla en la DB, unicamente en la salida)
+SELECT Id, Nombre, Clasificacion, NombreG AS Genero FROM Videojuegos inner join Genero ON Videojuegos.GeneroId = Genero.IdG;
+
+-- ############# STORED PROCEDURES #############
+
+-- STORED PROCEDURE: - CREAR un registro -
+CREATE OR ALTER PROCEDURE create_entry
+@nombre VARCHAR(50),
+@clasificacion INT,
+@generoid INT
+AS BEGIN
+INSERT INTO Videojuegos (Nombre, ClasificacionId, GeneroId) VALUES (@nombre, @clasificacion, @generoid);
+END;
+
+EXECUTE create_entry @nombre='Bayonetta',@clasificacion=4,@generoid=4;
+
+-- STORED PROCEDURE: - OBTENER todos los registros -
+CREATE OR ALTER PROCEDURE get_all
+AS BEGIN
+SELECT Id, Nombre, NombreC AS Clasificacion, NombreG AS Genero FROM Videojuegos INNER JOIN Genero ON Videojuegos.GeneroId = Genero.IdG INNER JOIN Clasificacion ON Videojuegos.ClasificacionId = Clasificacion.IdC;
+END;
+
+EXECUTE get_all;
+
+-- STORED PROCEDURE: - OBTENER todos los generos -
+CREATE OR ALTER PROCEDURE get_all_genres
+AS BEGIN
+SELECT IdG, NombreG, Estatus FROM Genero;
+END;
+
+EXECUTE get_all_genres;
+
+--STORED PROCEDURE: - OBTENER todas las clasificaciones -
+CREATE OR ALTER PROCEDURE get_all_classifications
+AS BEGIN
+SELECT IdC, NombreC, EstatusC FROM Clasificacion;
+END;
+
+EXECUTE get_all_classifications;
+
+-- STORED PROCEDURE: - OBTENER solo un registro por ID -
+CREATE OR ALTER PROCEDURE get_by_id
+@id INT
+AS BEGIN
+SELECT Id, Nombre, NombreC AS Clasificacion, NombreG AS Genero FROM Videojuegos INNER JOIN Genero ON Videojuegos.GeneroId = Genero.IdG INNER JOIN Clasificacion ON Videojuegos.ClasificacionId = Clasificacion.IdC WHERE Id=@id;
+END;
+
+EXECUTE get_by_id @id=2;
+
+-- STORED PROCEDURE: - ELIMINAR un solo registro (videojuego) por ID -
+CREATE OR ALTER PROCEDURE delete_by_id
+@id INT
+AS BEGIN
+DELETE FROM Videojuegos WHERE Id=@id;
+END;
+
+EXECUTE delete_by_id @id=16;
+EXECUTE get_all;
+
+-- STORED PROCEDURE: - ELIMINAR un solo registro (genero) por ID -
+CREATE OR ALTER PROCEDURE delete_genre_by_id
+@id INT
+AS BEGIN
+DELETE FROM Genero WHERE IdG=@id;
+END;
+
+EXECUTE delete_genre_by_id @id=7;
+
+-- STORED PROCEDURE: - MOIDIFICAR un registro (por ID) -
+CREATE OR ALTER PROCEDURE modify_by_id
+@id INT,
+@nombre VARCHAR(50),
+@clasificacionid INT,
+@generoid INT
+AS BEGIN
+UPDATE Videojuegos SET Nombre=@nombre, ClasificacionId=@clasificacionid, GeneroId=@generoid WHERE Id=@id;
+END;
+
+EXECUTE modify_by_id @id=17, @nombre='Lollipop Chainsaw', @clasificacionid=4, @generoid=4;
+
+-- ############# MODIFICADORES (ALTER) #############
+-- Cambiar nombre de columna -
+-- Sintaxis: EXEC sp_rename 'dbo.NombreTabla.NombreAntiguoColumna', 'NuevoNombreColumna', 'COLUMN';
+EXEC sp_rename 'dbo.Videojuegos.Clasificacion', 'ClasificacionId', 'COLUMN';
+
+-- Cambiar tipo de dato de columna -
+-- Sintaxis: ALTER TABLE tabla ALTER COLUMN campo tipodedato
+ALTER TABLE Videojuegos ALTER COLUMN ClasificacionId INT;
+
+-- Actualizar campo SQL -
+-- Sintaxis: UPDATE nombre-de-la-tabla SET nombre-de-la-columna = valor WHERE condición
+UPDATE Videojuegos SET ClasificacionId=1 WHERE GeneroId BETWEEN 0 AND 10;
+
+-- Agregar llave foranea en tabla existente
+-- Sintaxis: ALTER TABLE nombre-de-la-tabla-que-exporta-llave ADD FOREIGN KEY (nombre-del-campo-llave-foranea) REFERENCES nombre-tabla-importadora(campo-relacionado-a-llave-foranea)
+ALTER TABLE Videojuegos ADD FOREIGN KEY (ClasificacionId) REFERENCES Clasificacion(IdC);
+
+-- ############### IMPLEMENTAR TABLA DE CLASIFICACION Y USAR LLAVE FORANEA ###############
+-- ###### NOTA: Al cambiar el nombre de la columna debemos CAMBIAR LOS PARAMETROS Y COLUMNAS EN LOS STORED PROCEDURES ######
+
+-- Crear la tabla Clasificacion
+CREATE TABLE Clasificacion (
+IdC INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+NombreC VARCHAR(50) NOT NULL,
+EstatusC BIT
+);
+
+--Cambiar (en Videojuegos) el nombre de la columna Clasificacion por ClasificacionId
+EXEC sp_rename 'dbo.Videojuegos.Clasificacion', 'ClasificacionId', 'COLUMN';
+
+--Cambiar (en Videojuegos) el tipo de dato de ClasificacionId, de VARCHAR a INT...
+--... para poder hacer referencia al ID del nombre de la clasificacion en la tabla Clasificacion.
+ALTER TABLE Videojuegos ALTER COLUMN ClasificacionId INT;
+
+--Solo para iniciar con todo en orden, ponemos todos los ClasificacionId en 1
+UPDATE Videojuegos SET ClasificacionId=1 WHERE GeneroId BETWEEN 0 AND 10;
+
+--Insertamos algunas clasificaciones en Clasificacion (segun la ESRB)
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('EVERYONE', 1);
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('EVERYONE 10+', 1);
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('TEEN', 1);
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('MATURE 17+', 1);
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('ADULTS ONLY 18+', 1);
+INSERT INTO Clasificacion (NombreC, EstatusC) VALUES ('RATING PENDING', 1);
+
+SELECT * FROM Clasificacion;
+
+--Agregamos la llave foranea
+ALTER TABLE Videojuegos ADD FOREIGN KEY (ClasificacionId) REFERENCES Clasificacion(IdC);
+
+--Modificamos los Stored Procedures (arriba en sus definiciones)
+
+--Modificamos los constructores (entidades) *c va a Visual Studio*
