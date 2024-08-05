@@ -3,11 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\datos\\d_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\negocio\\n_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\n_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\webllaveforanea\\views\\home\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|solutionrelative:webllaveforanea\\views\\home\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\datos\\d_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|solutionrelative:datos\\d_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\datos\\d_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\negocio\\n_clasificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\n_clasificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\webllaveforanea\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|solutionrelative:webllaveforanea\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\webllaveforanea\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|solutionrelative:webllaveforanea\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\negocio\\n_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\n_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\datos\\d_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50876214-3133-45A5-8E91-E53084EC08AB}|Datos\\Datos.csproj|solutionrelative:datos\\d_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|solutionrelative:entidades\\e_videojuegos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\entidades\\e_clasificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|c:\\users\\aleja\\source\\repos\\solllaveforanea\\entidades\\e_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|solutionrelative:entidades\\e_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\entidades\\e_clasificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9198D3B-C92A-4106-BD2F-F688316A7C85}|Entidades\\Entidades.csproj|solutionrelative:entidades\\e_clasificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\webllaveforanea\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|solutionrelative:webllaveforanea\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\webllaveforanea\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD93DFC8-D189-405B-A2B5-09598BDCBC67}|WebLlaveForanea\\WebLlaveForanea.csproj|solutionrelative:webllaveforanea\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\negocio\\n_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73D35818-08B4-4E73-91F0-738C0EA554C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\n_generos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,33 +54,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "E_Clasificaciones.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Clasificaciones.cs",
-              "RelativeDocumentMoniker": "Entidades\\E_Clasificaciones.cs",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Clasificaciones.cs",
-              "RelativeToolTip": "Entidades\\E_Clasificaciones.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T00:07:37.221Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "E_Videojuegos.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Videojuegos.cs",
               "RelativeDocumentMoniker": "Entidades\\E_Videojuegos.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Videojuegos.cs",
               "RelativeToolTip": "Entidades\\E_Videojuegos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T16:29:54.377Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "E_Generos.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Generos.cs",
+              "RelativeDocumentMoniker": "Entidades\\E_Generos.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Generos.cs",
+              "RelativeToolTip": "Entidades\\E_Generos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T01:23:12.962Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "E_Clasificaciones.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Clasificaciones.cs",
+              "RelativeDocumentMoniker": "Entidades\\E_Clasificaciones.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Entidades\\E_Clasificaciones.cs",
+              "RelativeToolTip": "Entidades\\E_Clasificaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T00:07:37.221Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -78,13 +108,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebLlaveForanea\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebLlaveForanea\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wCUAAABOAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T17:26:02.064Z",
               "EditorCaption": ""
@@ -97,48 +127,87 @@
               "RelativeDocumentMoniker": "Negocio\\N_Generos.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Negocio\\N_Generos.cs",
               "RelativeToolTip": "Negocio\\N_Generos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T16:29:00.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "D_Generos.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Generos.cs",
-              "RelativeDocumentMoniker": "Datos\\D_Generos.cs",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Generos.cs",
-              "RelativeToolTip": "Datos\\D_Generos.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAADAAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T16:26:52.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebLlaveForanea\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebLlaveForanea\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAACEAAAAkAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEIAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-02T17:33:08.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "N_Clasificaciones.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Negocio\\N_Clasificaciones.cs",
+              "RelativeDocumentMoniker": "Negocio\\N_Clasificaciones.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Negocio\\N_Clasificaciones.cs",
+              "RelativeToolTip": "Negocio\\N_Clasificaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T02:01:26.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "D_Videojuegos.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Videojuegos.cs",
               "RelativeDocumentMoniker": "Datos\\D_Videojuegos.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Videojuegos.cs",
               "RelativeToolTip": "Datos\\D_Videojuegos.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDIAAABBAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwFUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T16:26:22.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "D_Generos.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Generos.cs",
+              "RelativeDocumentMoniker": "Datos\\D_Generos.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Datos\\D_Generos.cs",
+              "RelativeToolTip": "Datos\\D_Generos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T16:26:52.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Agregar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Views\\Home\\Agregar.cshtml",
+              "RelativeDocumentMoniker": "WebLlaveForanea\\Views\\Home\\Agregar.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\WebLlaveForanea\\Views\\Home\\Agregar.cshtml",
+              "RelativeToolTip": "WebLlaveForanea\\Views\\Home\\Agregar.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T02:21:47.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "N_Videojuegos.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Negocio\\N_Videojuegos.cs",
+              "RelativeDocumentMoniker": "Negocio\\N_Videojuegos.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolLlaveForanea\\Negocio\\N_Videojuegos.cs",
+              "RelativeToolTip": "Negocio\\N_Videojuegos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T02:00:34.526Z",
               "EditorCaption": ""
             }
           ]

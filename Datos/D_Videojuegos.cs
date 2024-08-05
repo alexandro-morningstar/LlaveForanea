@@ -37,13 +37,13 @@ namespace Datos
 
                     videojuego.Id = Convert.ToInt32(reader["Id"]);
                     videojuego.Nombre = Convert.ToString(reader["Nombre"]);
-                    videojuego.ClasificacionId = Convert.ToInt32(reader["Clasificacion"]);
+                    //videojuego.ClasificacionId = Convert.ToInt32(reader["Clasificacion"]);
                     //videojuego.GeneroId = Convert.ToInt32(reader["Genero"]); //No estamos solicitando esto
 
-                    clasificacion.Nombre = Convert.ToString(reader["NombreC"]); //Nombre de la clasificacion
+                    clasificacion.Nombre = Convert.ToString(reader["Clasificacion"]); //Nombre de la clasificacion (en realidad sería NombreC, pero pusimos NombreC AS Clasificacion en el Stored Procedure)
 
                     //genero.Id = Convert.ToInt32(reader["IdG"]); //Tampoco estamos solicitando esto
-                    genero.Nombre = Convert.ToString(reader["Genero"]); //Nombre del genero
+                    genero.Nombre = Convert.ToString(reader["Genero"]); //Nombre del genero (en realidad sería NombreG, pero pusimos NombreG AS Genero en el Stored Procedure)
 
                     //Lo equivalente al INNER JOIN
                     videojuego.E_Generos = genero; // Aqui le agregamos a su propiedad compuesta (de videojuego), un objeto del tipo genero

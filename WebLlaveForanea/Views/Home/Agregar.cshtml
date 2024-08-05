@@ -32,10 +32,11 @@
             </div>
             <div class="mb-3 row align-items-center">
                 <div class="col-sm-4">
-                    <label class="col-form-label" for="Clasificacion">Clasificación:</label>
+                    <label class="col-form-label" for="ClasificacionId">Clasificación:</label>
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" name="Clasificacion" placeholder="" required />
+                    @Html.DropDownList("ClasificacionId", null, "Seleccionar Clasificacion", new { @class="form-control" })
+                    @*<input class="form-control" type="text" name="ClasificacionId" placeholder="" required />*@
                 </div>
             </div>
             <div class="mb-3 row align-item-center">
@@ -43,7 +44,8 @@
                     <label class="col-form-label" for="GeneroId">Genero:</label>
                 </div>
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" name="GeneroId" placeholder="" />
+                    @Html.DropDownList("GeneroId", null, "Seleccionar Genero", new { @class = "form-control" }) <!--Se le pasa el nombre del ViewBag definido en el controlador-->
+                    @*<input class="form-control" type="text" name="GeneroId" placeholder="" />*@
                 </div>
             </div>
             <div>

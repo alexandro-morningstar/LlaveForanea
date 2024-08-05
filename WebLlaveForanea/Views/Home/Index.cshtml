@@ -58,13 +58,13 @@
                         <tr>
                             <td>@videojuego.Id</td>
                             <td>@videojuego.Nombre</td>
-                            <td>@videojuego.Clasificacion</td>
+                            <td>@videojuego.E_Clasificaciones.Nombre</td>
                             <td>@videojuego.E_Generos.Nombre</td>
                             <td>
-                                <a class="btn btn-outline-warning" href="/Main/GoToEdit?id=@videojuego.Id">
+                                <a class="btn btn-outline-warning" href="/Main/IrEditar?id=@videojuego.Id">
                                     Editar <i class="fa-regular fa-pen-to-square"></i>
                                 </a>
-                                <a class="btn btn-outline-danger" href="/Main/GoToDelete?id=@videojuego.Id">
+                                <a class="btn btn-outline-danger" href="/Main/IrEliminar?id=@videojuego.Id">
                                     Eliminar <i class="fa-solid fa-delete-left"></i>
                                 </a>
                             </td>
