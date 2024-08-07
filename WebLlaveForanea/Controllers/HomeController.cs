@@ -67,5 +67,92 @@ namespace WebLlaveForanea.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public ActionResult IrEditar(int id)
+        {
+            E_Videojuegos videojuegoEditar = new E_Videojuegos();
+            List<E_Generos> ListaGeneros = new List<E_Generos>();
+            List<E_Clasificaciones> ListaClasificaciones = new List<E_Clasificaciones> ();
+
+            try
+            {
+                ListaGeneros = negocio_g.N_ObtenerGeneros(); //Recuperamos todos los generos (lista de generos)
+                ListaClasificaciones = negocio_c.N_ObtenerClasificaciones();
+                
+                videojuegoEditar = negocio_v.N_ObtenerVideojuegosPorId(id);
+
+                ViewBag.GeneroId = new SelectList(ListaGeneros, "Id", "Nombre", videojuegoEditar.GeneroId);
+                ViewBag.ClasificacionId = new SelectList(ListaClasificaciones, "Id", "Nombre", videojuegoEditar.ClasificacionId);
+
+                return View("VistaEditar", videojuegoEditar);
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult EditarPost(E_Videojuegos videojuegoEditar)
+        {
+            try
+            {
+                negocio_v.N_EditarVideojuego(videojuegoEditar);
+                TempData["success"] = $"El videojuego {videojuegoEditar.Nombre} se ha editado exitosamente";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult IrEliminar(int id)
+        {
+            E_Videojuegos videojuegoEliminar = new E_Videojuegos();
+
+            try
+            {
+                videojuegoEliminar = negocio_v.N_ObtenerVideojuegosPorId(id);
+                return View("VistaEliminar", videojuegoEliminar);
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            try
+            {
+                negocio_v.N_EliminarVideojuego(id);
+                TempData["success"] = $"El videojuego con ID: {id} fue eliminado exitosamente";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Buscar(string searchText)
+        {
+            List<E_Videojuegos> videojuegos = new List<E_Videojuegos>();
+
+            try
+            {
+                videojuegos = negocio_v.N_GetByNameOrGenre(searchText);
+                return View("Index", videojuegos);
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

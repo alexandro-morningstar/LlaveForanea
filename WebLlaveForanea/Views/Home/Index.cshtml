@@ -18,8 +18,8 @@
         <!--Header que contiene la barra de navegación superior-->
         <nav class="navbar fixed-top">
             <div class="container-fluid">
-                <form action="/Main/Search" method="post" class="d-flex">
-                    <input id="colorplaceholder" type="search" name="text" placeholder="Busqueda por texto o número" class="form-control ms-5 me-2 col-lg-1" />
+                <form action="/Home/Buscar" method="post" class="d-flex">
+                    <input id="colorplaceholder" type="search" name="searchText" placeholder="Busqueda por nombre o genero" class="form-control ms-5 me-2 col-lg-1" />
                     <button type="submit" class="btn btn-outline-info">
                         <i class="fa-solid fa-magnifying-glass" style="color: #5492B9;"></i>
                     </button>
@@ -61,10 +61,10 @@
                             <td>@videojuego.E_Clasificaciones.Nombre</td>
                             <td>@videojuego.E_Generos.Nombre</td>
                             <td>
-                                <a class="btn btn-outline-warning" href="/Main/IrEditar?id=@videojuego.Id">
+                                <a class="btn btn-outline-warning" href="/Home/IrEditar?id=@videojuego.Id">
                                     Editar <i class="fa-regular fa-pen-to-square"></i>
                                 </a>
-                                <a class="btn btn-outline-danger" href="/Main/IrEliminar?id=@videojuego.Id">
+                                <a class="btn btn-outline-danger" href="/Home/IrEliminar?id=@videojuego.Id">
                                     Eliminar <i class="fa-solid fa-delete-left"></i>
                                 </a>
                             </td>

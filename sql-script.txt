@@ -5,8 +5,10 @@ INSERT INTO Genero (NombreG, Estatus) VALUES ('Shooter', 1); --2
 INSERT INTO Genero (NombreG, Estatus) VALUES ('Adventure', 1); --3
 INSERT INTO Genero (NombreG, Estatus) VALUES ('Hack and Slash', 1); --4
 INSERT INTO Genero (NombreG, Estatus) VALUES ('Racing', 1); --5
-INSERT INTO Genero (NombreG, Estatus) VALUES ('Musical', 1); --9
 INSERT INTO Genero (NombreG, Estatus) VALUES ('Survival Horror', 1); --6
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Simulador', 1); --7 relleno
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Novela Interactiva', 1); --8 relleno
+INSERT INTO Genero (NombreG, Estatus) VALUES ('Musical', 1); --9
 INSERT INTO Genero (NombreG, Estatus) VALUES ('Terror', 1); --10
 
 --EVERYONE 1, 10+ 2, TEEN 3, MATURE 4, ADULTS 5, PENDING 6
@@ -80,7 +82,7 @@ EXECUTE get_all_classifications;
 CREATE OR ALTER PROCEDURE get_by_id
 @id INT
 AS BEGIN
-SELECT Id, Nombre, NombreC AS Clasificacion, NombreG AS Genero FROM Videojuegos INNER JOIN Genero ON Videojuegos.GeneroId = Genero.IdG INNER JOIN Clasificacion ON Videojuegos.ClasificacionId = Clasificacion.IdC WHERE Id=@id;
+SELECT Id, Nombre, NombreC AS Clasificacion, NombreG AS Genero, GeneroId, ClasificacionId FROM Videojuegos INNER JOIN Genero ON Videojuegos.GeneroId = Genero.IdG INNER JOIN Clasificacion ON Videojuegos.ClasificacionId = Clasificacion.IdC WHERE Id=@id;
 END;
 
 EXECUTE get_by_id @id=2;
@@ -93,7 +95,6 @@ DELETE FROM Videojuegos WHERE Id=@id;
 END;
 
 EXECUTE delete_by_id @id=16;
-EXECUTE get_all;
 
 -- STORED PROCEDURE: - ELIMINAR un solo registro (genero) por ID -
 CREATE OR ALTER PROCEDURE delete_genre_by_id
@@ -115,6 +116,15 @@ UPDATE Videojuegos SET Nombre=@nombre, ClasificacionId=@clasificacionid, GeneroI
 END;
 
 EXECUTE modify_by_id @id=17, @nombre='Lollipop Chainsaw', @clasificacionid=4, @generoid=4;
+
+-- STORED PROCEDURE: - Busqueda por nombre o genero - 
+CREATE OR ALTER PROCEDURE search_by_name_or_genre
+@searchtext VARCHAR(50)
+AS BEGIN
+SELECT Id, Nombre, NombreC AS Clasificacion, NombreG AS Genero FROM Videojuegos INNER JOIN Genero ON Videojuegos.GeneroId=Genero.IdG INNER JOIN Clasificacion ON Videojuegos.ClasificacionId=Clasificacion.IdC WHERE Videojuegos.Nombre LIKE '%'+@searchtext+'%' OR Genero.NombreG LIKE '%'+@searchtext+'%';
+END;
+
+EXECUTE search_by_name_or_genre @searchText='survival';
 
 -- ############# MODIFICADORES (ALTER) #############
 -- Cambiar nombre de columna -
